@@ -1,0 +1,137 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt&",
+        "dtStar&"
+      ],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "configDic&Sequence_1",
+        "webSite&Sequence_1",
+        "folderPath&Sequence_1",
+        "filePath&Sequence_1",
+        "newPath&Sequence_1",
+        "newFolderPath&Sequence_1",
+        "dtStar&8ca4eb06-973c-4d59-be3a-69da286df438",
+        "dt&8ca4eb06-973c-4d59-be3a-69da286df438"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CreateConfig.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dtConfig&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "ConfigDic"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "readData.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dtStar&1e1c877a-5d83-4e0d-910f-e361d5857b6e",
+        "dt&1e1c877a-5d83-4e0d-910f-e361d5857b6e",
+        "dtGetData&Sequence_5"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_filePath",
+        "in_filePath",
+        "in_webSite",
+        "folderPath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "cleanBlankLine.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dtStar&25a571a0-f452-4f9d-a111-8017f8eae892",
+        "dt&25a571a0-f452-4f9d-a111-8017f8eae892",
+        "index&Sequence_1",
+        "dt_Update&Sequence_1",
+        "dt&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_filePath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "starsConvertToInteger.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dtStar&25a571a0-f452-4f9d-a111-8017f8eae892",
+        "dt&25a571a0-f452-4f9d-a111-8017f8eae892",
+        "IntegerPart&Sequence_4",
+        "decimalPart&Sequence_4",
+        "index&Sequence_1",
+        "starText&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_macroPath",
+        "in_filePath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "TEST_Macro.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dtStar&1e1c877a-5d83-4e0d-910f-e361d5857b6e",
+        "dt&1e1c877a-5d83-4e0d-910f-e361d5857b6e",
+        "dtStar&0f768c5f-9a16-4e2a-b5ec-877ad38f4f35"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "readerDate.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dtDate&Sequence_1",
+        "readDate&Sequence_1",
+        "date2&Sequence_1",
+        "date1&Sequence_1",
+        "dt&1e1c877a-5d83-4e0d-910f-e361d5857b6e",
+        "dtStar&1e1c877a-5d83-4e0d-910f-e361d5857b6e"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_folderPath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "sendEmail.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dtStar&1e1c877a-5d83-4e0d-910f-e361d5857b6e",
+        "dt&1e1c877a-5d83-4e0d-910f-e361d5857b6e"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_FilePath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}

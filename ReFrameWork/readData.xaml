@@ -1,0 +1,240 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="readData" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="folderPath" Type="InArgument(x:String)" />
+    <x:Property Name="in_webSite" Type="InArgument(x:String)" />
+    <x:Property Name="in_filePath" Type="InArgument(x:String)" />
+    <x:Property Name="out_filePath" Type="OutArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>839.2,1772.8</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>readData_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="readData" sap:VirtualizedContainerService.HintSize="849.6,1708" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="787.2,1619.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch.Try>
+        <Sequence sap:VirtualizedContainerService.HintSize="750.4,1364.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence sap:VirtualizedContainerService.HintSize="688,1276" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NApplicationCard AttachMode="ByInstance" CloseMode="{x:Null}" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Use Browser Chrome: Solo Kağıt Havlu Dev Rulo 1=3 : Amazon.com.tr: Sağlık ve Bakım" sap:VirtualizedContainerService.HintSize="625.6,1164" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InUiElement="{x:Null}" InteractionMode="DebuggerApi" IsIncognito="{x:Null}" OpenMode="{x:Null}" OutUiElement="{x:Null}" ScopeGuid="bb010842-3889-4505-9819-882fda5c869e" Timeout="{x:Null}" UserDataFolderMode="{x:Null}" UserDataFolderPath="{x:Null}" Version="V2" WebDriverMode="{x:Null}">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,924" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="sd:DataTable" Name="dtGetData" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:MaximizeWindow ContinueOnError="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="529.6,56.8" sap2010:WorkflowViewState.IdRef="MaximizeWindow_2" Window="{x:Null}" />
+                    <ui:Click AlterIfDisabled="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Click 'A '" sap:VirtualizedContainerService.HintSize="529.6,139.2" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" UnblockInput="{x:Null}">
+                      <ui:Click.CursorPosition>
+                        <ui:CursorPosition Position="Center">
+                          <ui:CursorPosition.OffsetX>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetX>
+                          <ui:CursorPosition.OffsetY>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetY>
+                        </ui:CursorPosition>
+                      </ui:Click.CursorPosition>
+                      <ui:Click.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d56eafa6-f3f8-4083-b1b1-feee20707010" InformativeScreenshot="c53e85a8185e11d8cb85400e8cc4de57" Selector="&lt;webctrl parentid='reviews-medley-footer' tag='A' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:Click.Target>
+                    </ui:Click>
+                    <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dtGetdata]" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DelayBetweenPages="{x:Null}" DisplayName="Pull Data in Web Site" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Müşteri'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='Yıldız'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column2' Name='Tarih'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column3' Name='Yorum'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='fulltext'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='i' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column2' attr='fulltext'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column3' attr='fulltext'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='4' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="529.6,189.6" sap2010:WorkflowViewState.IdRef="NExtractData_2" InScope="{x:Null}" InUiElement="{x:Null}" LimitExtractionTo="None" MaximumResults="0" OutUiElement="{x:Null}" ScopeIdentifier="bb010842-3889-4505-9819-882fda5c869e" Timeout="{x:Null}" Version="V3">
+                      <uix:NExtractData.NextLink>
+                        <uix:TargetAnchorable BrowserURL="https://www.amazon.com.tr/Clear-Maksimum-Ferahl%C4%B1k-Derisi-%C5%9Eampuan/product-reviews/B0BT7XP16R/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&amp;reviewerType=all_reviews" CVScreenId="7cd75ab6-1d0c-4fda-bfd1-0dd2f69bbedd" CvTextArea="166, 557, 61, 16" CvTextArgument="Sonraki" CvType="Text" DesignTimeRectangle="150, 545, 119, 41" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='cm_cr-pagination_bar' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='cm_cr-pagination_bar' tag='A' type='' class='' aaname='Sonraki→' check:innerText='Sonraki' /&gt;" Guid="38caf0f7-7aa1-47a9-a641-2d10062abbd1" ImageBase64="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" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='https://m.media-amazon.com/images/I/11EIQ5IGqaL._RC%7C01e5ncglxyL.css,01lF2n-pPaL.css,41VDcCqF+5L.css,31Zhso255KL.css,01JxBjM51UL.css,11EhJq0eAcL.css,01qPl4hxayL.css,01ti0q+221L.css,413Vvv3GONL.css,11TIuySqr6L.css,01Rw4F+QU6L.css,11rd2+IXLOL.css,01DwiCRvNn*' title='Amazon.com.tr:Müşteri Yorumları: Clear Men Kepeğe Karşı Etkili Şampuan Maksimum Ferahlık 350 ml' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V4" Visibility="Interactive" />
+                      </uix:NExtractData.NextLink>
+                      <uix:NExtractData.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.amazon.com.tr/Clear-Maksimum-Ferahl%C4%B1k-Derisi-%C5%9Eampuan/product-reviews/B0BT7XP16R/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&amp;reviewerType=all_reviews" DesignTimeRectangle="32, 150, 1458, 2443" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl id='cm_cr-review_list' tag='DIV' /&gt;" Guid="f19c8bec-2100-4ebf-a8a0-9047a4b0946a" InformativeScreenshot="f97fce62f9e2b2605e919df7f2787060.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='https://m.media-amazon.com/images/I/11EIQ5IGqaL._RC%7C01e5ncglxyL.css,01lF2n-pPaL.css,41VDcCqF+5L.css,31Zhso255KL.css,01JxBjM51UL.css,11EhJq0eAcL.css,01qPl4hxayL.css,01ti0q+221L.css,413Vvv3GONL.css,11TIuySqr6L.css,01Rw4F+QU6L.css,11rd2+IXLOL.css,01DwiCRvNn*' title='Amazon.com.tr:Müşteri Yorumları: Clear Men Kepeğe Karşı Etkili Şampuan Maksimum Ferahlık 350 ml' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                      </uix:NExtractData.Target>
+                    </uix:NExtractData>
+                    <ui:ExcelApplicationScope DisplayName="Excel Application Scope" EditPassword="{x:Null}" ExistingWorkbook="{x:Null}" sap:VirtualizedContainerService.HintSize="529.6,448" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" Password="{x:Null}" Workbook="{x:Null}" WorkbookPath="[in_filePath + &quot;Yorumlar &quot; + Now.ToString(&quot;dd-MM-yyyy&quot;)]">
+                      <ui:ExcelApplicationScope.Body>
+                        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,313.6" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:ExcelWriteRange AddHeaders="True" DataTable="[dtGetData]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="433.6,120" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_2" SheetName="Sheet1" StartingCell="{x:Null}" />
+                            <Assign sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_2">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[out_filePath]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">[in_filePath + "Yorumlar " + Now.ToString("dd-MM-yyyy")]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:ExcelApplicationScope.Body>
+                    </ui:ExcelApplicationScope>
+                  </Sequence>
+                </ActivityAction>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp Area="-11, -11, 1942, 1030" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAF5SURBVDhPlVM9S8NQFBW0+QOO2h+gU9vdSbuLNP0HprtDfoBIhYKgWFyFLLpUC10EjbvawcFC4qJDm4CDllQdHHq9JzdfbYLUA4e8d98959738t4cESnMA2afOSuQC40Cg31EkrBtm3Rdp4qqklqtkmEYwUoKDRi4MhZ0u12az+VoYYowzIALg6GMBVqt5gs2ymWyLCuaL+fzQcYEhikDx3H8LkzTpMt2299C2EUG0gbYf6FUikRJZiBtEFaECbo5bjb/ZxAm79Xr/nxb06KY53l+LIG0QaFYjAQ4yOQfQTdTCAy+HJkycIBLfOIQ4AtRhbe1zmajd5fGFt+J+x1hZNBZJfqwEPgbt1sifNwlOoM0NBjcEJ3z8I4XR3E3KXwOiF5aUqy1iEjiDF4vxAS8WpMqvUOiJ2bviKtvSlXkoSDWA4P4Kr89SCJMkMwcB1/qrPATupa8H/4bYHCVGxhNAC0+n8Yd9LliNvzHhOd8wvxGZEYglzWk/AJk0E1AkKBI3AAAAABJRU5ErkJggg==" InformativeScreenshot="303fbc90191f315e2f5ddc83c49823bd.jpg" Selector="&lt;html app='chrome.exe' htmlwindowname='https://m.media-amazon.com/images/I/11EIQ5IGqaL._RC%7C01e5ncglxyL.css,01lF2n-pPaL.css,41VDcCqF+5L.css,31Zhso255KL.css,01JxBjM51UL.css,11GEPqXartL.css,01qPl4hxayL.css,01ti0q+221L.css,413Vvv3GONL.css,11TIuySqr6L.css,01Rw4F+QU6L.css,115C34M4eKL.css,01DwiCRvNn*' title='Solo Kağıt Havlu Dev Rulo 1=3 : Amazon.com.tr: Sağlık ve Bakım' /&gt;" Title="Solo Kağıt Havlu Dev Rulo 1=3 : Amazon.com.tr: Sağlık ve Bakım" Url="[in_webSite]" />
+              </uix:NApplicationCard.TargetApp>
+            </uix:NApplicationCard>
+          </Sequence>
+        </Sequence>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="753.6,23.2" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
+  </Sequence>
+</Activity>

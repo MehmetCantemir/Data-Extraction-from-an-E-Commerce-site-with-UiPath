@@ -1,0 +1,121 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "newFilePath&Sequence_25",
+        "dtConfigg&Sequence_21",
+        "dtConfig&Sequence_21",
+        "SystemError&StateMachine_4",
+        "BusinessRuleException&StateMachine_4",
+        "Config&StateMachine_4",
+        "strSysErrMsg&StateMachine_4",
+        "attachmentpath1&StateMachine_4",
+        "dicStrConfig&StateMachine_4",
+        "ShouldStop&StateMachine_4",
+        "out_Carrierdic&StateMachine_4",
+        "timeProcessStart&StateMachine_4",
+        "usernameOTM&StateMachine_4",
+        "passwordOTM&StateMachine_4",
+        "sendername2&StateMachine_4",
+        "str_path&Sequence_25"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "ConfigDic"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "readData.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dtGetData&Sequence_6"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_filePath",
+        "in_filePath",
+        "in_webSite",
+        "folderPath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "cleanBlankLine.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dtUpdate&Sequence_1",
+        "dt&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "inFilePath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "starsConvertToInteger.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_star&Sequence_1",
+        "starText&Sequence_2",
+        "decimalPart&Sequence_3",
+        "IntegerPart&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_macroPath",
+        "in_filePath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "readerDate.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_date&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_folderPath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Data/test_date.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "tarihSentence&Sequence_1",
+        "datePattern&Sequence_1",
+        "splitText&Sequence_1",
+        "extractedDate&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "testDate.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "parsedDate&Sequence_1",
+        "variable1&Sequence_1",
+        "strTarih&Sequence_1",
+        "rowTarih&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}
